@@ -7,6 +7,8 @@ import LoginForm from "../../components/LoginForm/LoginForm";
 import RegistrationForm from "../../components/RegistrationForm/RegistrationForm";
 import { connect } from 'react-redux';
 import { setUsers, setEvents } from '../../actions';
+import { useTranslation } from 'react-i18next';
+
 
 TabPanel.propTypes = {
   children: PropTypes.node,
@@ -22,6 +24,7 @@ const a11yProps = (index) => {
 }
 const LoginRegistrationPage = (props) => {
   const [value, setValue] = useState(0);
+  const { t } = useTranslation();
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -45,7 +48,7 @@ const LoginRegistrationPage = (props) => {
         <Box sx={{ width: '100%' }}>
           <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
             <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-              <Tab label="Login" {...a11yProps(0)} />
+              <Tab label={t('login')} {...a11yProps(0)} />
               <Tab label="Registration" {...a11yProps(1)} />
             </Tabs>
           </Box>
