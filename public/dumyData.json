@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "username": "Moataz",
+      "email": "moatazreda20@gmail.com",
+      "password": "Asd@123456"
+    },
+    {
+      "username": "Ahmed",
+      "email": "ahmed6250@gmail.com",
+      "password": "Ahmed#123"
+    }
+  ],
+  "events": {
+    "moatazreda20@gmail.com": {
+      "userEvents": []
+    }
+  }
+}
